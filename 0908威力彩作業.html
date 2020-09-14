@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文字、陣列與數字處理作業_威力彩</title>
+  </head>
+  <body>
+    <script>
+      const area = () => {
+        let area1 = [0, 0, 0, 0, 0, 0];
+        for (i = 0; i < area1.length; i++) {
+          area1[i] = Math.random() * 37;
+          area1[i] = Math.round(area1[i]) + 1;
+
+          for (j = 1; j <= i; j++) {
+            if (area1[i] == area1[i - j]) {
+              i--;
+              console.log("same");
+            } else {
+              console.log("unsame");
+              console.log(area1[i]);
+            }
+          }
+        }
+
+        // let area1 = ["0", "0", "0", "0", "0", "0"];
+        // for (i = 0; i < area1.length; i++) {
+        //   area1[i] = parseInt(area[i]);
+        //   area1[i] = Math.random() * 37;
+        //   area1[i] = Math.round(area1[i]) + 1;
+        //   area1[i] = String(area1[i]);
+        //   if (area1.includes(area1[i - 1])) {
+        //     console.log("yes");
+        //     //  area1[i] = parseInt(area[i]);
+        //     //  area1[i] = Math.random() * 37;
+        //     //  area1[i] = Math.round(area1[i]) + 1;
+        //     //  area1[i] = String(area1[i]);
+        //     //break;
+        //   }
+        // }
+        return area1;
+      };
+      document.write(`第一區的號碼是${area()}`);
+
+      document.write("<br>");
+      const area2 = () => {
+        let area2Num = Math.random() * 7;
+        area2Num = Math.round(area2Num) + 1;
+        return area2Num;
+      };
+      document.write(`第二區的號碼是${area2()}`);
+
+      let num = 3;
+      console.log(typeof String(num));
+    </script>
+  </body>
+</html>
